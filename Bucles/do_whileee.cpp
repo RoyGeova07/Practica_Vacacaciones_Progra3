@@ -1,5 +1,5 @@
 #include <iostream>
-#include <stdlib.h>
+#include <stdlib.h>//libreria para dejar el programa en pausa
 
 using namespace std;
 
