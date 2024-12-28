@@ -1,0 +1,2 @@
+> [!NOTE]
+> practica solamente
