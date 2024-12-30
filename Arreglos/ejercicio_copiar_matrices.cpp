@@ -24,14 +24,17 @@ int messi(){
 
     int copia[100][100];
 
-    // Llenar la matriz original con números aleatorios
+    // Llenar la matriz original con numeros aleatorios
     random_device rd;
     mt19937 gen(rd());
     uniform_int_distribution<> dis(1, 100);
 
     for(int i = 0; i < filas; i++){
+
         for(int j = 0; j < columnas; j++){
+
             numeros[i][j] = dis(gen);
+
         }
     }
 
@@ -44,9 +47,13 @@ int messi(){
 
     // Imprimir la matriz copiada
     cout << "Matriz copiada:" << endl;
+
     for(int i = 0; i < filas; i++){
+
         for(int j = 0; j < columnas; j++){
+
             cout << copia[i][j] << " ";
+            
         }
         cout << endl;
     }
