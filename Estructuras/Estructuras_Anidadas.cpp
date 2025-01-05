@@ -28,7 +28,6 @@ int messi(){
     for (int i = 0; i < 2; i++)
     {
         
-
         cout<<"Digite su nombre: ";
         cin.ignore(); //para limpiar el buffer y no se salte el getline
         cin.getline(Empleados[i].nombre, 20, '\n');
