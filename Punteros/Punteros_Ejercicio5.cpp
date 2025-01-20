@@ -16,7 +16,7 @@ int roy(){
     while (true)
     {
         
-        cout<<"Ingrese el espacio del arrelo: "<<endl;
+        cout<<"Ingrese el espacio del arrelgo: "<<endl;
         cin>>nelementos;
 
         if (cin.fail())
@@ -54,6 +54,10 @@ int roy(){
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(),'\n');
 
+        }else{
+
+            break;
+
         }
         
 
@@ -76,7 +80,8 @@ int roy(){
 
     }
 
-    cout<<"El menor elemento es: "<<menor<<endl;
+    cout<<"\nEl menor elemento es: "<<menor<<endl;
+    cout<<"Posicicion en memoria: "<<direccion_numeros<<endl;
     
     
 
