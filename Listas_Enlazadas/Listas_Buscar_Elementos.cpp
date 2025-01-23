@@ -34,9 +34,9 @@ void BuscarLista(Nodo *,int);
 
 Nodo *lista=nullptr;
 
-int roy(){
+int main(){
 
-
+    Menu();
 
     return 0;
 }
@@ -51,7 +51,8 @@ void Menu(){
         cout<<"\t\n:::MENU\n";
         cout<<"1. Inserte elementos a la lista enlazada."<<endl;
         cout<<"2. Mostrar elementos de la lista enlazada."<<endl;
-        cout<<"3. Salir"<<endl;
+        cout<<"3. Buscar elementos."<<endl;
+        cout<<"4. Salir"<<endl;
         cout<<"Ingrese una opcion: ";
         cin>>opcion;
 
@@ -60,12 +61,31 @@ void Menu(){
             
             cout<<"Digite un numero: ";
             cin>>dato;
+            InsertarLista(lista,dato);
 
+
+        }else if(opcion==2){
+
+            MostrarLista(lista);
+
+        }else if(opcion==3){
+
+            cout<<"Ingrese un numero a buscar: ";
+            cin>>dato;
+            BuscarLista(lista,dato);
+
+        }else if(opcion==4){
+
+            cout<<"\nSaliendo del programa"<<endl;
+
+        }else{
+
+            cout<<"\nERROR: elija una de las opciones que se le indican."<<endl;
 
         }
         
 
-    } while (opcion != 3);
+    } while (opcion != 4);
     
 
 }
@@ -86,7 +106,7 @@ void InsertarLista(Nodo *&lista, int n){
 
     }
 
-    if (lista==nullptr)
+    if (lista==auxiliar)
     {
         
         lista=nuevo_nodo;
@@ -132,6 +152,38 @@ void MostrarLista(Nodo *lista){
 
 void BuscarLista(Nodo *lista,int n){
 
+    bool bandera=false;
+    
     Nodo *actual2=new Nodo();
+    actual2=lista;
+
+    while ((actual2 !=nullptr)&&(actual2->dato<=n))
+    {
+        
+        if (actual2->dato==n)
+        {
+            
+            bandera=true;
+
+        }
+
+        actual2=actual2->siguiente;
+        
+
+    }
+
+    if (bandera==true)
+    {
+        
+        cout<<"\nElemento "<<n<<" si ha sido encontrado."<<endl;
+
+    }else{
+
+        cout<<"\nElemento "<<n<<" no ha sido encontrado."<<endl;
+
+    }
+    
+    
+
 
 }
