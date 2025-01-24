@@ -10,7 +10,7 @@ using std::getline;
 class LibroCalificaciones
 {
 private:
-    /* data */
+  
 public:
 
 
@@ -28,7 +28,7 @@ int main(){
 
     string nombrecurso;cout << "Escriba el nombre del curso:" << endl;
     getline( cin, nombrecurso ); // lee el nombre de un curso con espacios en blanco
-   cout << endl; // imprime una línea en blanco
+    cout << endl; // imprime una línea en blanco
 
     milibro.MostrarMensaje(nombrecurso);
 
