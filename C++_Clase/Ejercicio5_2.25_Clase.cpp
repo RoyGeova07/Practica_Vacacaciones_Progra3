@@ -8,7 +8,7 @@ using namespace std;//este me sirve para no usar el std:: por cada salida de pan
 //es un múltiplo del segundo e imprima el resultado.
 
 int main(){
-
+        
     //variables necesitadas
     int n1,n2;
 

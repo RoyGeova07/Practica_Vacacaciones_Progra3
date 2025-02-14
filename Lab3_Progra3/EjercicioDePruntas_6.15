@@ -1,0 +1,70 @@
+Responda a cada una de las siguientes preguntas
+ a) ¿Qué significa elegir números “al azar”?
+    R// Elegir numeros al azar significa seleccionar valores de una manera impredecible 
+    y sin un patron determinista. 
+    En terminos computacionales, los numeros generados son pseudoaleatorios, 
+    lo que significa que parecen aleatorios pero son producidos por un algoritmo 
+    determinista basado en una semilla inicial.
+
+-------------------------------------------------------------------------------------------------------------
+
+ b) ¿Por qué es la función rand útil para simular juegos al azar?
+    R// Genera números pseudoaleatorios:  lo que permite representar eventos impredecibles 
+    como tirar un dado, lanzar una moneda o barajar cartas.
+
+    Permite crear modelos de probabilidad: emulando situaciones como loterías, ruletas o cualquier evento
+    basado en la aleatoriedad.
+
+    Ayuda a desarrollar inteligencia artificial en videojuegos: 
+    donde la aleatoriedad puede hacer que el comportamiento de los enemigos o eventos sea menos predecible.
+
+-------------------------------------------------------------------------------------------------------------
+
+ c) ¿Por qué se debe randomizar un programa mediante srand? 
+    ¿Bajo qué circunstancias es aconsejable no randomizar?
+    R// La función srand(seed) establece una semilla para la generacion de numeros pseudoaleatorios 
+    en rand(). Si no se usa srand(), rand() generara la misma secuencia de numeros cada vez 
+    que se ejecute el programa.
+
+    ¿Cuándo randomizar con srand()?
+    R//Cuando se quiere obtener valores impredecibles en cada ejecucion, como en simulaciones,
+    videojuegos o seguridad informatica.
+
+    ¿Cuándo NO randomizar?
+    R//En pruebas o depuracion, ya que generar la misma secuencia de numeros ayuda a reproducir errores 
+    y hacer analisis consistentes.
+
+    En aplicaciones donde la consistencia es clave, como en algoritmos criptograficos que requieren 
+    secuencias especificas.
+
+----------------------------------------------------------------------------------------------------------
+
+ d) ¿Por qué a menudo es necesario escalar o desplazar los valores producidos por rand?
+    R// La funcion rand() devuelve un numero entero entre 0 y RAND_MAX (que generalmente es 32767). 
+    Para adaptar estos valores a un rango especifico, es necesario escalarlos y desplazarlos.
+
+    Ejemplo:
+    Si queremos simular el lanzamiento de un dado (números del 1 al 6), usamos
+    int dado = (rand() % 6) + 1; // Escala [0,5] y desplaza a [1,6]
+
+    Si queremos un número en el rango [a, b], usamos
+    int numero = a + rand() % (b - a + 1);
+
+    Esto es necesario porque rand() por sí solo no genera números en el rango deseado.
+
+----------------------------------------------------------------------------------------------------------
+
+ e) ¿Por qué es la simulación computarizada de las situaciones reales una técnica útil?
+    R//son utiles porque 
+
+    1. Permiten modelar situaciones del mundo real sin riesgos
+    (ejemplo: simuladores de vuelo o modelos climaticos).
+
+    2. Ahorran tiempo y dinero, ya que se pueden probar escenarios sin necesidad de realizar experimentos
+    fisicos costosos.
+
+    3.Facilitan la prediccion y toma de decisiones, ya que permiten probar multiples escenarios 
+    antes de ejecutar una accion real.
+
+    4. Son clave en inteligencia artificial y machine learning, donde se entrenan algoritmos 
+    con entornos simulados antes de implementarlos en situaciones reales.

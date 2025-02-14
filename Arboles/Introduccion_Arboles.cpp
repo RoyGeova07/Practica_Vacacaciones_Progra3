@@ -24,15 +24,20 @@ struct Nodo
 {
     
     int dato;
-    Nodo *derecha;
-    Nodo *Izquierda;
+    Nodo *derecha;//este nodo puede apunta a la derecha 
+    Nodo *Izquierda;//este nodo apunto a la izquierda
 
 };
+
+//Propiedades de un arbol: 
+
+//Longitud de un camino: Es el numero de ramas que uno tiene q pasar para llegar de un nodo hacia otro
+// y siempre comieza desde el nodo raiz
 
 
 int main(){
 
-
+    
 
     return 0;
 }
