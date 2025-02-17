@@ -79,9 +79,8 @@ void Menu(){
             break;
       
         default:
-
             cout<<"ERROR OPCION INVALIDA. INTENTE DE NUEVO"<<endl;
-
+            break;
             break;
         }
 

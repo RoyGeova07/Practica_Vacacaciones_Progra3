@@ -18,7 +18,8 @@ void Tarea(int id){
 
     lock_guard<mutex> guard(mtx);//aqui bloquea automaticamente
     cout<<"Hilo"<<id<< " accede de forma segura.\n";
-    //mutex se libera automaticamente  al salir del bloque
+    //mutex se libera automaticamente al salir del bloque 
+    
 
 }
 

@@ -40,5 +40,5 @@ int main(){
 
 }
 
-//• Problemas Potenciales: Si se olvida llamar a unlock() después de lock(), el recurso
+//• Problemas Potenciales: Si se olvida llamar a unlock() despues de lock(), el recurso
 //permanecerá bloqueado, lo que puede causar deadlocks

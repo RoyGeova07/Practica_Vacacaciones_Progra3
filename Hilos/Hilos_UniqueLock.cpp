@@ -16,6 +16,21 @@ mutex mtx;
 
 void Tarea(int id){
 
-    //unique_lock<mutex>
+    unique_lock<mutex> lock(mtx);//aqui lo bloque automaticamente
+    cout<<"Hilo "<<id<<" esta en la seccion critica.\n";
+    lock.unlock();//aqui los desbloque automaticamente.
+    cout<<"Hilo "<<id<<" ha liberado del recurso.\n";
 
 } 
+
+int main(){
+
+    thread t1(Tarea,1);
+    thread t2(Tarea,2);
+
+    t1.join();
+    t2.join();
+
+    return 0;
+
+}
